@@ -6,8 +6,8 @@ current_mat: public_2022-06-01
 
 # Source paths for dataframes (can be URLs or local file paths)
 # URLs from Jesse's repository: jbloomlab/SARS2-mut-fitness
-founder_source: ../SARS2-mut-fitness/results_public_2022-06-01/clade_founder_nts/clade_founder_nts.csv
-counts_source: ../SARS2-mut-fitness/results_public_2022-06-01/expected_vs_actual_mut_counts/expected_vs_actual_mut_counts.csv
+founder_source: data/results_june_2022/clade_founder_nts.csv 
+counts_source: data/results_june_2022/expected_vs_actual_mut_counts.csv 
 
 # Mapping for grouping clades into clusters
 clade_cluster:
@@ -15,24 +15,14 @@ clade_cluster:
   '20B': ['20B'],
   '20C': ['20C'],
   '20E': ['20E'],
-  '20F': ['20F'],
   '20G': ['20G'],
   '20I': ['20I'],
-  '20J': ['20J'],
   '21C': ['21C'],
   '21I': ['21I'],
   '21J': ['21J'],
   '21K': ['21K'],
-  '21L': ['21L'],
-  '22A': ['22A'],
-  '22B': ['22B'],
-  '22D': ['22D'],
-  '22E': ['22E'],
-  '22F': ['22F'],
-  '23A': ['23A'],
-  '23B': ['23B'],
-  '23D': ['23D'],
-  'all': ['20A', '20B', '20C', '20E', '20F','20G', '20I', '20J','21C', '21I', '21J', '21K', '21L', '22A', '22B', '22D', '22E', '22F', '23A', '23B', '23D']
+  '21M': ['21M'],
+  'all': ['20A', '20B', '20C', '20E', '20G', '20I', '21C', '21I', '21J','21K', '21M']
   }
 
 # Mapping for grouping clades into clusters
