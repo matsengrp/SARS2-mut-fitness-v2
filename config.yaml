@@ -2,7 +2,7 @@
 
 # specify one of the mutation-annotated trees in `mat_trees` as the "current" one that is
 # linked to by default as the best current estimates.
-current_mat: gisaid_2024-04-24
+current_mat: public_2022-06-01
 
 # Source paths for dataframes (can be URLs or local file paths)
 # URLs from Jesse's repository: jbloomlab/SARS2-mut-fitness
