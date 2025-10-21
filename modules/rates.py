@@ -218,9 +218,7 @@ def add_predicted_count(train_df, count_df, clades):
 
 # Add predicted counts to `count_df` for all clades
 def add_predicted_count_all_clades(train_pre_o, train_o, count_df):
+    # HACK: Using only train_pre_o for all clades (ignoring pre/post omicron split)
     clades = count_df.clade.unique()
-    clades_pre_o = clades[0:11]
-    clades_o = clades[11:]
 
-    add_predicted_count(train_pre_o, count_df, clades_pre_o)
-    add_predicted_count(train_o, count_df, clades_o)
+    add_predicted_count(train_pre_o, count_df, clades)
