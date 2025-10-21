@@ -23,26 +23,34 @@ rule all:
 
 rule get_counts_table:
     message:
-        "Downloading table with mutation counts from Jesse Bloom's GitHub repository"
+        "Getting mutation counts table"
     params:
-        url_counts=config["url_counts"],
+        source=config["counts_source"],
     output:
         csv='results/expected_vs_actual_counts.csv'
     shell:
         """
-            curl -k {params.url_counts} > {output.csv}
+        if [[ {params.source} =~ ^https?:// ]]; then
+            curl -k {params.source} > {output.csv}
+        else
+            cp {params.source} {output.csv}
+        fi
         """
 
 rule get_clade_founder:
     message:
-        "Downloading table with clade founder sequences from Jesse Bloom's GitHub repository"
+        "Getting clade founder sequences table"
     params:
-        url_founder=config["url_founder"],
+        source=config["founder_source"],
     output:
         csv='data/clade_founder.csv'
     shell:
         """
-            curl {params.url_founder} > {output.csv}
+        if [[ {params.source} =~ ^https?:// ]]; then
+            curl {params.source} > {output.csv}
+        else
+            cp {params.source} {output.csv}
+        fi
         """
 
 rule annotate_counts:
