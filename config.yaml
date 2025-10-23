@@ -6,10 +6,14 @@ current_mat: public_2022-06-01
 
 # Source paths for dataframes (can be URLs or local file paths)
 # URLs from Jesse's repository: jbloomlab/SARS2-mut-fitness
-founder_source: data/results_june_2022/clade_founder_nts.csv 
-counts_source: data/results_june_2022/expected_vs_actual_mut_counts.csv 
+# founder_source: data/results_june_2022/clade_founder_nts.csv 
+founder_source: ../SARS2-mut-fitness/results_public_2022-06-01/clade_founder_nts/clade_founder_nts.csv 
+# counts_source: data/results_june_2022/expected_vs_actual_mut_counts.csv 
+counts_source: ../SARS2-mut-fitness/results_public_2022-06-01/expected_vs_actual_mut_counts/expected_vs_actual_mut_counts.csv 
 
 # Mapping for grouping clades into clusters
+# meta: ../data/mat_trees/public-2022-06-01.metadata.tsv.gz
+# TODO, once the counts pipeline finishes, find the clades that exist in ^ expected_vs_actual_counts, update below accordingly
 clade_cluster:
   {'20A': ['20A'],
   '20B': ['20B'],
